@@ -1,47 +1,31 @@
 package com.example.dadstripplanner
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.dadstripplanner.ui.theme.DadsTripPlannerTheme
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            DadsTripPlannerTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        setContentView(R.layout.activity_main)
+
+        val destinationInput = findViewById<EditText>(R.id.destinationInput)
+        val sourceInput = findViewById<EditText>(R.id.sourceInput)
+        val currentLocation = findViewById<RadioButton>(R.id.currentLocation)
+        val sourceGroup = findViewById<RadioGroup>(R.id.sourceGroup)
+        val nextButton = findViewById<Button>(R.id.nextButton)
+
+        // Toggle source input visibility based on radio button
+        sourceGroup.setOnCheckedChangeListener { _, checkedId ->
+            sourceInput.visibility = if (checkedId == R.id.currentLocation) android.view.View.GONE else android.view.View.VISIBLE
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    DadsTripPlannerTheme {
-        Greeting("Android")
+        // Placeholder for Next button (to be implemented later)
+        nextButton.setOnClickListener {
+            // Add navigation logic here later
+        }
     }
 }
