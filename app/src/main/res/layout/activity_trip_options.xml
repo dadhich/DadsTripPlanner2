@@ -1,48 +1,413 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#000000"
-    android:padding="24dp">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trip Options"
-        android:textColor="#FFFFFF"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="24dp"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tripOption1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Train to Hornsby - Duration: 30 mins, Cost: $4.50"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/tripBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trip from Lowe Rd opp James Park to Hornsby Station"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:id="@+id/tripOption2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bus to Hornsby - Duration: 45 mins, Cost: $3.00"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/card_border"
+            android:layout_marginBottom="8dp">
 
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:backgroundTint="#00FFFF"
-        android:paddingHorizontal="32dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="48dp"/>
-</LinearLayout>
+            <TextView
+                android:id="@+id/tripOption1Eta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="26 mins"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="#00FFFF"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tripOption1Arrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:44 am"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tripOption1Timetable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10:42"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"/>
+
+                    <View
+                        android:id="@+id/tripOption1StatusBox"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="#FFA500"
+                        android:layout_marginHorizontal="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tripOption1Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="running 2 mins late"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tripOption1Route"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="575"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/card_border"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tripOption2Eta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="26 mins"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="#00FFFF"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tripOption2Arrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1:42 am"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tripOption2Timetable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1:40"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"/>
+
+                    <View
+                        android:id="@+id/tripOption2StatusBox"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="#FFA500"
+                        android:layout_marginHorizontal="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tripOption2Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="running 2 mins late"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tripOption2Route"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="575"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/card_border"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tripOption3Eta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="54 mins"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="#00FFFF"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tripOption3Arrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:12 am"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tripOption3Timetable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:12"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"/>
+
+                    <View
+                        android:id="@+id/tripOption3StatusBox"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="#00FF00"
+                        android:layout_marginHorizontal="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tripOption3Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="On time"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tripOption3Route"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="575"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/card_border"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tripOption4Eta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="84 mins"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="#00FFFF"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tripOption4Arrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:42 am"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tripOption4Timetable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:42"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"/>
+
+                    <View
+                        android:id="@+id/tripOption4StatusBox"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="#00FF00"
+                        android:layout_marginHorizontal="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tripOption4Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="On time"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tripOption4Route"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="575"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/card_border"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tripOption5Eta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2 hrs"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="#00FFFF"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tripOption5Arrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:12 pm"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tripOption5Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Real-time data unavailable"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tripOption5Route"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="575"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:backgroundTint="#00FFFF"
+            android:paddingHorizontal="32dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
