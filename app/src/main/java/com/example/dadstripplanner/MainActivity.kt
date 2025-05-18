@@ -1,5 +1,6 @@
 package com.example.dadstripplanner
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -25,9 +26,17 @@ class MainActivity : AppCompatActivity() {
                 if (checkedId == R.id.customLocation) android.view.View.VISIBLE else android.view.View.GONE
         }
 
-        // Placeholder for Next button (to be implemented later)
+        // Navigate to TripOptionsActivity on Next button click
         nextButton.setOnClickListener {
-            // Add navigation logic here later
+            val destination = destinationInput.text.toString()
+            val source = if (currentLocation.isChecked) "my current location" else sourceInput.text.toString()
+
+            if (destination.isNotEmpty()) {
+                val intent = Intent(this, TripOptionsActivity::class.java)
+                intent.putExtra("destination", destination)
+                intent.putExtra("source", source)
+                startActivity(intent)
+            }
         }
     }
 }

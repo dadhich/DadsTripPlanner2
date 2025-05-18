@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trip Options"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/tripOption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Train to Hornsby - Duration: 30 mins, Cost: $4.50"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tripOption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bus to Hornsby - Duration: 45 mins, Cost: $3.00"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:backgroundTint="#00FFFF"
+        android:paddingHorizontal="32dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"/>
+</LinearLayout>
