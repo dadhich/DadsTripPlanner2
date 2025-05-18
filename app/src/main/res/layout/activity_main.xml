@@ -4,16 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#000000"
-    android:padding="16dp">
+    android:padding="24dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I want to goto"
+        android:text="I want to go to"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="16dp"/>
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_gravity="start"
+        android:layout_marginBottom="24dp"/>
 
     <EditText
         android:id="@+id/destinationInput"
@@ -22,16 +23,20 @@
         android:hint="(type location)"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:background="@null"
-        android:layout_marginBottom="16dp"/>
+        android:textSize="18sp"
+        android:background="@drawable/edit_text_underline"
+        android:paddingBottom="8dp"
+        android:layout_marginBottom="24dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="from"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_gravity="start"
+        android:layout_marginBottom="24dp"/>
 
     <RadioGroup
         android:id="@+id/sourceGroup"
@@ -45,7 +50,9 @@
             android:layout_height="wrap_content"
             android:text="my current location"
             android:textColor="#FFFFFF"
-            android:checked="true"/>
+            android:textSize="18sp"
+            android:checked="false"
+            android:layout_marginBottom="16dp"/>
 
         <EditText
             android:id="@+id/sourceInput"
@@ -54,9 +61,10 @@
             android:hint="(type location)"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
-            android:background="@null"
-            android:visibility="gone"
-            android:layout_marginTop="8dp"/>
+            android:textSize="18sp"
+            android:background="@drawable/edit_text_underline"
+            android:paddingBottom="8dp"
+            android:visibility="gone"/>
     </RadioGroup>
 
     <Button
@@ -65,7 +73,9 @@
         android:layout_height="wrap_content"
         android:text="Next"
         android:textColor="#000000"
+        android:textSize="18sp"
         android:backgroundTint="#00FFFF"
+        android:paddingHorizontal="32dp"
         android:layout_gravity="center"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="48dp"/>
 </LinearLayout>
