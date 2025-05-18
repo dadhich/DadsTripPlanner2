@@ -2,6 +2,7 @@ package com.example.dadstripplanner
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
@@ -19,11 +20,13 @@ class MainActivity : AppCompatActivity() {
         val customLocation = findViewById<RadioButton>(R.id.customLocation)
         val sourceGroup = findViewById<RadioGroup>(R.id.sourceGroup)
         val nextButton = findViewById<Button>(R.id.nextButton)
+        val sourceUnderline = findViewById<View>(R.id.sourceUnderline) // ID for the underline View
 
-        // Toggle source input visibility based on radio button
+        // Toggle source input and underline visibility based on radio button
         sourceGroup.setOnCheckedChangeListener { _, checkedId ->
-            sourceInput.visibility =
-                if (checkedId == R.id.customLocation) android.view.View.VISIBLE else android.view.View.GONE
+            val isCustomSelected = checkedId == R.id.customLocation
+            sourceInput.visibility = if (isCustomSelected) android.view.View.VISIBLE else android.view.View.GONE
+            sourceUnderline.visibility = if (isCustomSelected) android.view.View.VISIBLE else android.view.View.GONE
         }
 
         // Navigate to TripOptionsActivity on Next button click

@@ -25,9 +25,16 @@
         android:textColor="#00FFFF"
         android:textColorHint="#7A7676"
         android:textSize="18sp"
-        android:background="@drawable/edit_text_underline"
+        android:background="@android:color/transparent"
         android:paddingBottom="8dp"
-        android:layout_marginBottom="24dp"/>
+        android:layout_marginBottom="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"
+        android:alpha="0.3"
+        android:layout_marginBottom="16dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,8 +79,16 @@
             android:textColor="#00FFFF"
             android:textColorHint="#7A7676"
             android:textSize="18sp"
-            android:background="@drawable/edit_text_underline"
+            android:background="@android:color/transparent"
             android:paddingBottom="8dp"
+            android:visibility="gone"/>
+
+        <View
+            android:id="@+id/sourceUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFF"
+            android:alpha="0.3"
             android:visibility="gone"/>
     </RadioGroup>
 
