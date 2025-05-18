@@ -14,6 +14,7 @@
         android:textSize="32sp"
         android:textStyle="bold"
         android:layout_gravity="start"
+        android:layout_marginTop="48dp"
         android:layout_marginBottom="24dp"/>
 
     <EditText
@@ -21,8 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="(type location)"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:textColor="#00FFFF"
+        android:textColorHint="#7A7676"
         android:textSize="18sp"
         android:background="@drawable/edit_text_underline"
         android:paddingBottom="8dp"
@@ -36,6 +37,7 @@
         android:textSize="32sp"
         android:textStyle="bold"
         android:layout_gravity="start"
+        android:layout_marginTop="48dp"
         android:layout_marginBottom="24dp"/>
 
     <RadioGroup
@@ -51,7 +53,15 @@
             android:text="my current location"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            android:checked="false"
+            android:layout_marginBottom="16dp"/>
+
+        <RadioButton
+            android:id="@+id/customLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="custom location"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
             android:layout_marginBottom="16dp"/>
 
         <EditText
@@ -59,8 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="(type location)"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
+            android:textColor="#00FFFF"
+            android:textColorHint="#7A7676"
             android:textSize="18sp"
             android:background="@drawable/edit_text_underline"
             android:paddingBottom="8dp"

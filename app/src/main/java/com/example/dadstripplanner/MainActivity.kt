@@ -15,12 +15,14 @@ class MainActivity : AppCompatActivity() {
         val destinationInput = findViewById<EditText>(R.id.destinationInput)
         val sourceInput = findViewById<EditText>(R.id.sourceInput)
         val currentLocation = findViewById<RadioButton>(R.id.currentLocation)
+        val customLocation = findViewById<RadioButton>(R.id.customLocation)
         val sourceGroup = findViewById<RadioGroup>(R.id.sourceGroup)
         val nextButton = findViewById<Button>(R.id.nextButton)
 
         // Toggle source input visibility based on radio button
         sourceGroup.setOnCheckedChangeListener { _, checkedId ->
-            sourceInput.visibility = if (checkedId == R.id.currentLocation) android.view.View.GONE else android.view.View.VISIBLE
+            sourceInput.visibility =
+                if (checkedId == R.id.customLocation) android.view.View.VISIBLE else android.view.View.GONE
         }
 
         // Placeholder for Next button (to be implemented later)
